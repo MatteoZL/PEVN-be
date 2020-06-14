@@ -7,10 +7,10 @@ const pool = new Pool({
     database: 'pevn',
     port: '5432' */
 
-    host: 'ec2-34-198-243-120.compute-1.amazonaws.com',
-    user: 'srwhsmjbsxdjvl',
-    password: 'add9d409205bf0e0aeff054c19baad682a7bdd0386c6a2f23c41498a8035e151',
-    database: 'd2huikpn51plh6',
+    host: 'bibwymipdjrmf9jgfe1l-postgresql.services.clever-cloud.com',
+    user: 'uwkdfaxou8zqwvctxwvk',
+    password: 'frS9S0MIIAT4wMJ5DWKx',
+    database: 'bibwymipdjrmf9jgfe1l',
     port: '5432'
 });
 
