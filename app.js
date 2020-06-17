@@ -1,8 +1,9 @@
 import express from 'express';
-import morgan from "morgan";
+import morgan from 'morgan';
 import cors from 'cors';
-import path from 'path';
+import fileupload from 'express-fileupload';
 import history from 'connect-history-api-fallback';
+import path from 'path';
 
 const app = express();
 
@@ -11,6 +12,9 @@ app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(fileupload({useTempFiles: true}));
+app.use(history());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 /* app.get('/', (req, res) => {
@@ -19,10 +23,6 @@ app.use(express.urlencoded({extended: true}));
 app.use('/', require('./routes/auth.routes'));
 app.use('/professor', require('./routes/proffesor.routes'));
 app.use('/student', require('./routes/student.routes'));
-
-// Middleswares for Vue
-app.use(history());
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Settings
 app.set('port', process.env.PORT || 5000);
