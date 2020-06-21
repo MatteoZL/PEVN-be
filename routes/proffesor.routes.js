@@ -1,5 +1,5 @@
 import express from 'express';
-import p_querys from '../lib/professsor';
+import p_querys from '../controllers/professsor';
 
 const router = express.Router();
 

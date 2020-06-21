@@ -1,5 +1,5 @@
 import express from "express";
-import s_querys from "../lib/student";
+import s_querys from "../controllers/student";
 
 const router = express();
 

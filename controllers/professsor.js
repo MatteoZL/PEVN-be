@@ -1,5 +1,5 @@
 import pool from "../database/keys";
-import helpers from './helpers';
+import helpers from '../libs/cloudinary';
 
 const p_querys = {};
 
